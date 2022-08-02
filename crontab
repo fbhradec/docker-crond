@@ -1,0 +1,10 @@
+
+
+
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/frankbarton/pipeline/tools/scripts/
+PYTHONPATH=/frankbarton/pipeline/tools/python
+
+
+* * * * *	echo /scripts/maintainJobPermissions.sh
+* * * * *	/scripts/maintainJobPermissions.sh
