@@ -15,6 +15,7 @@ FROM alpine:3.7
 RUN apk update
 RUN apk add curl wget jq procps python
 RUN apk add htop
+RUN apk add bash
 
 #CMD [ "/usr/sbin/cron","-f","-L /dev/stdout" ]
 CMD [ "crond","-f","-l", "15", "-L", "/dev/stdout" ]
