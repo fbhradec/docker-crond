@@ -2,8 +2,13 @@
 
 
 
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/frankbarton/pipeline/tools/scripts/
-PYTHONPATH=/frankbarton/pipeline/tools/python
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/__STUDIO__/pipeline/tools/scripts/:/__STUDIO__/pipeline/tools/scripts/admin/
+PYTHONPATH=/__STUDIO__/pipeline/tools/python
 
-
-*/5 * * * *	/scripts/admin/maintainJobPermissions.sh
+#		day		day
+# min	hour	month	month	week	command line
+# =====	=======	=======	=======	=======	===========================================================================================================================================================
+  */5	*	*	*	*	maintainJobPermissions.sh	2>&1 >> /logs/maintainJobPermissions.sh.log	2>&1
+  0	0	*	*	*	install-chrome.sh		2>&1 >> /logs/install-chrome.sh.log		2>&1
+  0	0	*	*	*	install-blender.sh		2>&1 >> /logs/install-blender.sh.log		2>&1
+  0	0	*	*	*	install-nuke.sh			2>&1 >> /logs/install-nuke.sh.log		2>&1
