@@ -31,9 +31,9 @@ RUN apt install -y \
 RUN apt install -y sudo 
 RUN apt install -y rsync
 RUN apt install -y libxxf86vm1
-RUN apt-get update
+#RUN apt-get update
 # we need nodejs for scrapping using puppeteer
-RUN apt install -y nodejs npm 
+#RUN apt install -y nodejs npm 
 # blender 3.5 needs this now
 RUN apt install -y libsm6
 RUN apt install -y unzip

@@ -13,4 +13,5 @@ PYTHONPATH=/__STUDIO__/pipeline/tools/python
   0	0	*	*	*	install-chrome.sh		2>&1 >> /logs/install-chrome.sh.log		2>&1
   0	0	*	*	*	install-blender.sh		2>&1 >> /logs/install-blender.sh.log		2>&1
   0	0	*	*	*	install-nuke.sh			2>&1 >> /logs/install-nuke.sh.log		2>&1
+  0     0       *       *       *       install-houdini.sh              2>&1 >> /logs/install-houdini.sh.log            2>&1
   *	*	*	*	*	( for n in $(ls /logs) ; do tail -n 2000000 /logs/$n > /logs/$n.tmp ; mv /logs/$n.tmp /logs/$n ; done )
