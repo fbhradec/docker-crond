@@ -36,6 +36,7 @@ RUN apt-get update
 RUN apt install -y nodejs npm 
 # blender 3.5 needs this now
 RUN atp install -y libsm6
+RUN apt install -y unzip
 RUN apt-get clean
 CMD [ "bash", "-c", "chmod 600 /var/spool/cron/crontabs/root ; cron -f -L 8" ]
 
