@@ -26,11 +26,16 @@ RUN apt install -y \
 	libasound2 \
 	libxdamage1 \
 	libxrandr2 \
-	libgbm1
+	libgbm1 
 
 RUN apt install -y sudo 
 RUN apt install -y rsync
 RUN apt install -y libxxf86vm1
+RUN apt-get update
+# we need nodejs for scrapping using puppeteer
+RUN apt install -y nodejs npm 
+# blender 3.5 needs this now
+RUN atp install -y libsm6
 RUN apt-get clean
 CMD [ "bash", "-c", "chmod 600 /var/spool/cron/crontabs/root ; cron -f -L 8" ]
 
