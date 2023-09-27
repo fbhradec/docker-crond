@@ -14,6 +14,7 @@ elif [ "$1" == "-l" ] ; then
 else
 	docker build . -t pipevfx-crond
 	docker rm -f pipevfx-crond
+	mkdir -p $CD/data
 	rm -rf $CD/.crontab
 	cat $CD/crontab | sed "s/__STUDIO__/$STUDIO/g" > $CD/.crontab
 	docker run --name pipevfx-crond -d \
@@ -23,6 +24,7 @@ else
 		-v /etc/passwd:/etc/passwd \
 		-v /etc/group:/etc/group \
 		-v /dev/shm:/dev/shm \
+		-v $CD/data:/data \
 		-v $CD/logs:/logs \
 		-v $CD/.crontab:/etc/crontabs/root \
 		-v $CD/.crontab:/var/spool/cron/crontabs/root \
