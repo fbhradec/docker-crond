@@ -37,7 +37,9 @@ RUN apt install -y libxxf86vm1
 # blender 3.5 needs this now
 RUN apt install -y libsm6
 RUN apt install -y unzip
+RUN apt install -y python3 make
 RUN apt-get clean
+RUN curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
 CMD [ "bash", "-c", "chmod 600 /var/spool/cron/crontabs/root ; cron -f -L 8" ]
 
 #RUN apk update

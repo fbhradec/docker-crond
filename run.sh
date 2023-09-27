@@ -24,7 +24,7 @@ else
 		-v /etc/passwd:/etc/passwd \
 		-v /etc/group:/etc/group \
 		-v /dev/shm:/dev/shm \
-		-v $CD/data:/data \
+		-v $CD:$CD \
 		-v $CD/logs:/logs \
 		-v $CD/.crontab:/etc/crontabs/root \
 		-v $CD/.crontab:/var/spool/cron/crontabs/root \
