@@ -26,5 +26,6 @@ else
 		-v $CD/logs:/logs \
 		-v $CD/.crontab:/etc/crontabs/root \
 		-v $CD/.crontab:/var/spool/cron/crontabs/root \
+		-v /var/run/docker.sock:/var/run/docker.sock \
 	pipevfx-crond:latest
 fi
